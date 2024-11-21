@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your global CSS file */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color-scheme: light;
+}
+
+/* components/HeroSection.css */
+.hero {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+.hero:hover {
+  transform: scale(1.05); /* Slightly scales up the hero section on hover */
+  opacity: 0.9; /* Changes opacity slightly for a subtle effect */
+}
+
+/* Animation for the scrolling text */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
